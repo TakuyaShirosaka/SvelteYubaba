@@ -26,9 +26,9 @@
 	}
 
 	// action listener
-	$: if (myName.length >= 10) {
+	$: if (myName.length >= 11) {
 		alert(`長い！`);
-		myName = myName.substr(0, 9);
+		myName = myName.substr(0, 10);
 	}
 
 	// component events namingClicked
