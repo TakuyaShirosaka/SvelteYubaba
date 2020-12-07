@@ -10,7 +10,12 @@
 	export let props_myName: string;
 
 	// component events
-	const confirm_dispatch = createEventDispatcher<Confirm_dispatch>();
+	const confirm_dispatch: <EventKey extends
+		| "namingClicked"
+		| "nameDetermining">(
+		type: EventKey,
+		detail?: Confirm_dispatch[EventKey]
+	) => void = createEventDispatcher<Confirm_dispatch>();
 
 	// const
 	const finish: string = "書きました。。。。";
@@ -107,6 +112,7 @@
 
 	li {
 		margin: 10px auto;
+		font-size: 1em;
 		list-style: none;
 	}
 

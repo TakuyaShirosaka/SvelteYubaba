@@ -3,15 +3,15 @@
 	import Confirm from "./Confirm.svelte";
 
 	// props
-	export let props_header;
+	export let props_header: string;
 
 	// const
-	const src = "img/document.png";
+	const src: string = "img/document.png";
 
 	// reactive
-	let myName = "";
-	let visible = false;
-	let input_disabled = false;
+	let myName: string = "";
+	let visible: boolean = false;
+	let input_disabled: boolean = false;
 
 	function inputValidate(e: FocusEvent) {
 		const target: HTMLInputElement = e.target as HTMLInputElement;
